@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <recordTypes>
+        <fullName>InternalIdeasIdeaRecordType</fullName>
+        <active>true</active>
+        <description>Record Type used to associate ideas with a specific community</description>
+        <label>Internal Ideas: Idea Record Type</label>
+    </recordTypes>
+    <webLinks>
+        <fullName>Post_Invoice</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Post Invoice</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/apex.js&quot;)}
+
+if(&apos;{! blng__Invoice__c.blng__InvoiceStatus__c }&apos; != &apos;Draft&apos;)
+	alert(&quot;Invoice status cannot be changed from &quot; + &apos;{!blng__Invoice__c.blng__InvoiceStatus__c}&apos;);
+else
+{
+	var result = sforce.apex.execute(&quot;PostedInvoice&quot;,&quot;UpdateStatus&quot;,{invoiceId: &apos;{!blng__Invoice__c.Id}&apos;, Status: &apos;Posted&apos;});
+	if(result)
+		alert(result);
+	else
+		document.location.reload(true);
+}</url>
+    </webLinks>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

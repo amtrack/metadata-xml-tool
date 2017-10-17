@@ -1,0 +1,24 @@
+{
+  "name": "metadata-xml-tool",
+  "version": "0.1.0",
+  "description": "CLI tool for processing Salesforce Metadata XML files",
+  "main": "",
+  "scripts": {
+    "test": "make test"
+  },
+  "bin": {
+    "metadata-xml-tool": "metadata-xml-tool.sh"
+  },
+  "repository": "IPfolioDev/metadata-xml-tool",
+  "author": "Matthias Rolke <mr.amtrack@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "salesforce",
+    "sfdx",
+    "cli",
+    "metadata"
+  ],
+  "devDependencies": {
+    "bats": "^0.4.2"
+  }
+}

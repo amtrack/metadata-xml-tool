@@ -2,7 +2,7 @@
 
 > CLI tool for processing Salesforce Metadata XML files
 
-[![Build Status](https://travis-ci.org/amtrack/metadata-xml-tool.svg?branch=master)](https://travis-ci.org/amtrack/metadata-xml-tool)
+[![Build Status](https://travis-ci.org/IPfolioDev/metadata-xml-tool.svg?branch=master)](https://travis-ci.org/IPfolioDev/metadata-xml-tool)
 
 ## Installation
 

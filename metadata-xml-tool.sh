@@ -21,8 +21,9 @@ _remove-element-matching() {
   expression="$2"
   while read -r file; do
     if [ ! -z "$file" ]; then
-      perl -0777 -p -i -e "s{(<${elementToRemove}>.*?</${elementToRemove}>)}{ \$1 =~ m|${expression}|?\"METADATA_XML_TOOL_LINE_TO_BE_REMOVED\":\$1}gse" "$file"
-      perl -n -i -e "print unless /METADATA_XML_TOOL_LINE_TO_BE_REMOVED/" "${file}"
+      perl -0777 -p -i.pbak -e "s{(<${elementToRemove}>.*?</${elementToRemove}>)}{ \$1 =~ m|${expression}|?\"METADATA_XML_TOOL_LINE_TO_BE_REMOVED\":\$1}gse" "$file"
+      perl -n -i.pbak -e "print unless /METADATA_XML_TOOL_LINE_TO_BE_REMOVED/" "${file}"
+      rm -rf "${file}.pbak"
     fi
   done < <(echo "${@:3}")
 }
@@ -31,8 +32,9 @@ _remove-element() {
   elementToRemove="$1"
   while read -r file; do
     if [ ! -z "$file" ]; then
-      perl -0777 -p -i -e "s{(<${elementToRemove}>.*?</${elementToRemove}>)}{METADATA_XML_TOOL_LINE_TO_BE_REMOVED}gse" "${file}"
-      perl -n -i -e "print unless /METADATA_XML_TOOL_LINE_TO_BE_REMOVED/" "${file}"
+      perl -0777 -p -i.pbak -e "s{(<${elementToRemove}>.*?</${elementToRemove}>)}{METADATA_XML_TOOL_LINE_TO_BE_REMOVED}gse" "${file}"
+      perl -n -i.pbak -e "print unless /METADATA_XML_TOOL_LINE_TO_BE_REMOVED/" "${file}"
+      rm -rf "${file}.pbak"
     fi
   done < <(echo "${@:2}")
 }
@@ -43,7 +45,8 @@ _replace-tag-value() {
   export newValue="$3"
   while read -r file; do
     if [ ! -z "$file" ]; then
-      perl -0777 -p -i -e 's|<$ENV{tagToReplace}>$ENV{oldValue}</$ENV{tagToReplace}>|<$ENV{tagToReplace}>$ENV{newValue}</$ENV{tagToReplace}>|g' "${file}"
+      perl -0777 -p -i.pbak -e 's|<$ENV{tagToReplace}>$ENV{oldValue}</$ENV{tagToReplace}>|<$ENV{tagToReplace}>$ENV{newValue}</$ENV{tagToReplace}>|g' "${file}"
+      rm -rf "${file}.pbak"
     fi
   done < <(echo "${@:4}")
 }

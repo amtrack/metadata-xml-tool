@@ -2,7 +2,7 @@
 
 > CLI tool for processing Salesforce Metadata XML files
 
-[![Build Status](https://travis-ci.org/IPfolioDev/metadata-xml-tool.svg?branch=master)](https://travis-ci.org/IPfolioDev/metadata-xml-tool)
+[![Actions Status](https://github.com/IPfolioDev/metadata-xml-tool/workflows/Test%20and%20Release/badge.svg)](https://github.com/IPfolioDev/metadata-xml-tool/actions)
 
 ## Installation
 
@@ -135,8 +135,8 @@ index 916f693..7c3c3ef 100644
 
 ## Sponsors
 
-* [IPfolio](http://www.ipfolio.com)
-* [PARX](http://www.parx.com)
+- [IPfolio](http://www.ipfolio.com)
+- [PARX](http://www.parx.com)
 
 ## License
 

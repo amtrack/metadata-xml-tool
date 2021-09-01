@@ -2,7 +2,7 @@
 
 > CLI tool for processing Salesforce Metadata XML files
 
-[![Actions Status](https://github.com/IPfolioDev/metadata-xml-tool/workflows/Test%20and%20Release/badge.svg)](https://github.com/IPfolioDev/metadata-xml-tool/actions)
+[![Actions Status](https://github.com/amtrack/metadata-xml-tool/workflows/Test%20and%20Release/badge.svg)](https://github.com/amtrack/metadata-xml-tool/actions)
 
 ## Installation
 

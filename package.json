@@ -9,7 +9,7 @@
   "bin": {
     "metadata-xml-tool": "metadata-xml-tool.sh"
   },
-  "repository": "IPfolioDev/metadata-xml-tool",
+  "repository": "amtrack/metadata-xml-tool",
   "author": "Matthias Rolke <mr.amtrack@gmail.com>",
   "license": "MIT",
   "keywords": [

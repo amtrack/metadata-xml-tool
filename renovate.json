@@ -6,9 +6,6 @@
   ],
   "rangeStrategy": "bump",
   "node": {
-    "supportPolicy": ["current"]
-  },
-  "travis": {
-    "enabled": true
+    "supportPolicy": ["lts_active"]
   }
 }

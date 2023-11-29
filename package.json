@@ -3,8 +3,9 @@
   "version": "0.0.0-development",
   "description": "CLI tool for processing Salesforce Metadata XML files",
   "main": "",
+  "type": "module",
   "scripts": {
-    "test": "make test"
+    "test": "make test && mocha test"
   },
   "bin": {
     "metadata-xml-tool": "metadata-xml-tool.sh"
@@ -19,6 +20,8 @@
     "metadata"
   ],
   "devDependencies": {
-    "bats": "^1.9.0"
+    "bats": "^1.9.0",
+    "chai": "4.3.10",
+    "mocha": "10.2.0"
   }
 }

@@ -3,9 +3,5 @@
     "config:base",
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)"
-  ],
-  "rangeStrategy": "bump",
-  "node": {
-    "supportPolicy": ["lts_active"]
-  }
+  ]
 }

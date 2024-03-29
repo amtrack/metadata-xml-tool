@@ -5,7 +5,7 @@
   "main": "",
   "type": "module",
   "scripts": {
-    "test": "make test && mocha test"
+    "test": "mocha test && make test"
   },
   "bin": {
     "metadata-xml-tool": "metadata-xml-tool.sh"

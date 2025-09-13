@@ -2,23 +2,26 @@
   "name": "metadata-xml-tool",
   "version": "0.0.0-development",
   "description": "CLI tool for processing Salesforce Metadata XML files",
-  "main": "",
-  "scripts": {
-    "test": "make test"
-  },
-  "bin": {
-    "metadata-xml-tool": "metadata-xml-tool.sh"
-  },
-  "repository": "amtrack/metadata-xml-tool",
-  "author": "Matthias Rolke <mr.amtrack@gmail.com>",
-  "license": "MIT",
   "keywords": [
     "salesforce",
     "sfdx",
     "cli",
     "metadata"
   ],
+  "repository": "amtrack/metadata-xml-tool",
+  "license": "MIT",
+  "author": "Matthias Rolke <mr.amtrack@gmail.com>",
+  "main": "",
+  "bin": {
+    "metadata-xml-tool": "metadata-xml-tool.sh"
+  },
+  "scripts": {
+    "test": "make test"
+  },
   "devDependencies": {
     "bats": "^1.9.0"
+  },
+  "publishConfig": {
+    "provenance": true
   }
 }

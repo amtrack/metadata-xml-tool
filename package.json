@@ -20,8 +20,5 @@
   },
   "devDependencies": {
     "bats": "^1.9.0"
-  },
-  "publishConfig": {
-    "provenance": true
   }
 }
